@@ -1,5 +1,4 @@
-//started 09/16/19
-//inspiration: https://www.youtube.com/watch?v=jxGS3fKPKJA
+//Jeffrey Andersen
 
 ArrayList<Cell> cells = new ArrayList<Cell>();
 
@@ -10,16 +9,16 @@ void setup() {
 
 void draw() {
   background(255);
-  for (int i = 0; i < cells.size(); ++i) {
-    cells.get(i).show();
-    cells.get(i).update();
+  for (Cell c : cells) {
+    c.show();
+    c.update();
   }
 }
 
 void mousePressed() {
-  for (int i = 0; i < cells.size(); ++i) {
-    if (dist(mouseX, mouseY, cells.get(i).pos.x, cells.get(i).pos.y) <= cells.get(i).r / 2 + cells.get(i).r / 16) {
-      cells.add(cells.get(i).split());
+  for (Cell c : cells) {
+    if (dist(mouseX, mouseY, c.pos.x, c.pos.y) <= c.r / 2 + c.r / 16) {
+      cells.add(c.split());
       return;
     }
   }
