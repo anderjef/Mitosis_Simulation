@@ -1,4 +1,4 @@
-# Lorenz_Attractors
+# Mitosis Simulation
 ### Copyright
 (c) © 2021 Jeffrey Andersen
 
